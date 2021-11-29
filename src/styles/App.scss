@@ -2,13 +2,15 @@
 @import "./varibles.scss";
 @import "./breakpoints.scss";
 @import "./components/Header.scss";
+@import "./components/Header.scss";
+@import "./components/Banner.scss";
 
 
 body,
 html {
   // visibility: hidden ;
   user-select: none;
-  background: $white;
+  // background: $white;
   overscroll-behavior: none;
   margin: 0;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
