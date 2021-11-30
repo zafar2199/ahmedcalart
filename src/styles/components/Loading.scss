@@ -1,0 +1,43 @@
+.loading-container{
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg-nav;
+  position: absolute;
+  z-index: 22;
+}
+
+.loading-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.span-lines{
+  position: relative;
+  width: 400px;
+  height: 100px;
+  display: flex;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.span-line{
+  position: absolute;
+  color: $white;
+  opacity: .6;
+  font-size: 44px;
+  display: flex;
+  /* text-align: center; */
+}
+.span-line2{
+  transform: translateY(100px);
+  color: $white;
+  font-size: 44px;
+  display: flex;
+}
+.App{
+  width: 100vw;
+  height: 100vh;
+}

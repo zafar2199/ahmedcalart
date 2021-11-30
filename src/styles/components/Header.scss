@@ -1,10 +1,12 @@
 .header{
   position: fixed;
   width: 100%;
-  height: 128px;
+  height: 80px;
   z-index: 4;
+  pointer-events: auto;
   @include media("<=phone"){
     height: 96px;
+    border-bottom: 1px solid $border;
   }
   .logo{
     a{
@@ -18,18 +20,62 @@
   }
   .nav-toggle{
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 36px;
+    border: 1px solid $white;
+    border-radius: 25px;
+
     .hamburg-menu{
+      position: absolute;
       width: 25px;
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       span{
-        margin-bottom: 0.4rem;
+        margin-bottom: 0.3rem;
         width: 100%;
         background: $white;
         height: 2px;
         display: block;
+        &:nth-child(3){
+          margin-bottom: 0;
+        }
       }
     }
     .hamburg-menu-close{
+      position: absolute;
+      width: 30px;
+      height: 20px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+        svg{
+          color: $white;
+          position: absolute;
+          transition: 0.4s ease;
+          &:nth-child(2){
+            margin-top: 70px;
+          }
+        }
+        &:hover{
+          svg{
+            transform: translateY(-70px);
+            &:nth-child(2){
+              margin-top: 0;
+              transform: translateY(0);
+            }
+          }
+        }
 
+    }
+    &:hover{
+      border: 1px solid $border;
     }
   }
 }
