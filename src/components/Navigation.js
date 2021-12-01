@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { closeMenu } from '../animations/menuAnimation';
 
 const Navigation = () => {
   return(
@@ -8,13 +10,13 @@ const Navigation = () => {
           <div className="nav-column-left">
           <ul className="nav-links">
             <li>
-              <a href="#">Study</a>
+              <NavLink onClick={() => closeMenu()} to="/">Study</NavLink>
             </li>
             <li>
-              <a href="#">Projects</a>
+              <NavLink onClick={() => closeMenu()} to="/portfolio">Projects</NavLink>
             </li>
             <li>
-              <a href="#">About</a>
+              <NavLink onClick={() => closeMenu()} to="/about">About</NavLink>
             </li>
           </ul>
           </div>
@@ -36,9 +38,9 @@ const Navigation = () => {
 
             <div className="nav-column">
           <ul className="nav-infos">
-            <li><a href="#">Instagram.</a></li>
-            <li><a href="#">Telegram.</a></li>
-            <li><a href="#">Behance.</a></li>
+            <li><NavLink to="/">Instagram.</NavLink></li>
+            <li><NavLink to="/">Telegram.</NavLink></li>
+            <li><NavLink to="/">Behance.</NavLink></li>
 
           </ul>
             </div>
