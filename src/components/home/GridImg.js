@@ -7,6 +7,13 @@ import gridImg6 from "../../images/gridImg/gridImg6.png";
 import gridImg7 from "../../images/gridImg/gridImg7.png";
 import gridImg8 from "../../images/gridImg/gridImg8.png";
 
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+
+
 const GridImg = () => {
   return (
     <div className="container-fluid">

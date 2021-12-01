@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import gsap from "gsap";
 import { ReactComponent as UpArrow } from "../images/arrow-up-outline.svg";
 import { openMenu, closeMenu } from "../animations/menuAnimation";
 
-const tl = gsap.timeline();
 
 const Header = () => {
   const [menuState, setMenuState] = useState({ menuOpend: false });

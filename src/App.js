@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./styles/App.scss";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // coponents
 import Header from "./components/Header";
@@ -11,6 +11,10 @@ import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 //path element routes
 const routes = [
@@ -24,6 +28,25 @@ function App() {
     // mobile device
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+    gsap.from(".grid-item img", {
+      duration: 1.2,
+      css: {
+        scale: 0.6,
+        opacity: 0,
+        // rotation: 90,
+      },
+      scrollTrigger: {
+        trigger: ".grid-item",
+        start: "top 70%",
+        end: ".section",
+        // scrub: true,
+        // pin:true,
+        // pinSpacing:false,
+        markers: true,
+        toggleActions: "play none none none",
+      },
+    });
   }, []);
   return (
     <>
