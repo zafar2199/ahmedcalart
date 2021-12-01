@@ -43,7 +43,7 @@ function App() {
         // scrub: true,
         // pin:true,
         // pinSpacing:false,
-        markers: true,
+        // markers: true,
         toggleActions: "play none none none",
       },
     });
